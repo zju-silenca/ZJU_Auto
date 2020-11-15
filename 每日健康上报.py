@@ -200,30 +200,8 @@ def sendmail():
         print('邮件发送失败',e) #打印错误
 
 if __name__=="__main__":
-    # if os.path.exists('./config.json'):
-    #     configs = json.loads(open('./config.json', 'r').read())
         main("你的学号","统一认证密码")
         print(final_return_text)
         sendmail()
         sys.exit(0)
-        # hour = configs["schedule"]["hour"]
-        # minute = configs["schedule"]["minute"]
-    # else:
-    #     username = input("👤 浙大统一认证用户名: ")
-    #     password = getpass.getpass('🔑 浙大统一认证密码: ')
-    #     # print("⏲  请输入定时时间（默认每天6:05）")
-    #     # hour = input("\thour: ") or 6
-    #     # minute = input("\tminute: ") or 5
 
-"""
-    # Schedule task
-    scheduler = BlockingScheduler()
-    scheduler.add_job(main, 'cron', args=[username, password], hour=hour, minute=minute)
-    print('⏰ 已启动定时程序，每天 %02d:%02d 为您打卡' %(int(hour), int(minute)))
-    print('Press Ctrl+{0} to exit'.format('Break' if os.name == 'nt' else 'C'))
-
-    try:
-        scheduler.start()
-    except (KeyboardInterrupt, SystemExit):
-        pass
-"""

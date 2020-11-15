@@ -57,6 +57,4 @@ if __name__ == "__main__":
         print('出现错误，错误码：')
         print(result["status"])
         print('错误信息：'+result["message"])
-    input('按任意键关闭')
-    sys.exit(0)
     

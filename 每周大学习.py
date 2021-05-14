@@ -4,13 +4,13 @@ import re
 import sys
 
 if __name__ == "__main__":
-    getToken_url = 'https://qczj.h5yunban.com/qczj-qndxx/cgi-bin/login/we-chat/callback'
-    getUserInfo_url = 'https://qczj.h5yunban.com/qczj-qndxx/cgi-bin/user-api/course/last-info'
-    getClass_url = 'https://qczj.h5yunban.com/qczj-qndxx/cgi-bin/common-api/course/current'
-    checkin_url = 'https://qczj.h5yunban.com/qczj-qndxx/cgi-bin/user-api/course/join'
+    getToken_url = 'https://qczj.h5yunban.com/qczj-youth-learning/cgi-bin/login/we-chat/callback?'
+    getUserInfo_url = 'https://qczj.h5yunban.com/qczj-youth-learning/cgi-bin/user-api/course/last-info'
+    getClass_url = 'https://qczj.h5yunban.com/qczj-youth-learning/cgi-bin/common-api/course/current'
+    checkin_url = 'https://qczj.h5yunban.com/qczj-youth-learning/cgi-bin/user-api/course/join'
     openId = {
         'appid':'wx56b888a1409a2920',
-        'openid': ''#在这里填入你的openId
+        'openid': 'oO-a2tzI7bG_4nBsKwBckYO4rZK4'
     }
     headers = {
         'Content-Type': 'text/plain'
@@ -54,7 +54,8 @@ if __name__ == "__main__":
     if(result["status"]==200):
         print("签到成功")
     else:
-        print('出现错误，错误码：')
-        print(result["status"])
+        print('出现错误，错误码：'+ str(result["status"]))
         print('错误信息：'+result["message"])
+    input('按任意键关闭')
+    sys.exit(0)
     

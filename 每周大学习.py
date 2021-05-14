@@ -10,7 +10,7 @@ if __name__ == "__main__":
     checkin_url = 'https://qczj.h5yunban.com/qczj-youth-learning/cgi-bin/user-api/course/join'
     openId = {
         'appid':'wx56b888a1409a2920',
-        'openid': 'oO-a2tzI7bG_4nBsKwBckYO4rZK4'
+        'openid': 'Your openID'
     }
     headers = {
         'Content-Type': 'text/plain'
